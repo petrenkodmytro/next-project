@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    domains: ["fakestoreapi.com"], // resolve to use fakestoreapi.com
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
