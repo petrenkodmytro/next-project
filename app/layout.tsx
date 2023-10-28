@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Store App",
@@ -13,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" type="image/png" sizes="32x32" href="/app/favicon/favicon-32x32.png" />
       </head>
       <body className="">
-        <header>header</header>
+        <Header/>
         {children}
         <footer>footer</footer>
       </body>

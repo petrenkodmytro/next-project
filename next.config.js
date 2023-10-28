@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["fakestoreapi.com"], // resolve to use fakestoreapi.com
+    domains: ["fakestoreapi.com", "img.freepik.com"], // resolve to use fakestoreapi.com
   },
 };
 
