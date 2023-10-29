@@ -1,7 +1,7 @@
 "use client"; // for useState
 
 import ProductImage from "@/components/ProductImage";
-import { Dialog } from "@headlessui/react";
+import { Dialog } from "@headlessui/react"; // modal window
 import { StarIcon as StarIconOutline } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { useParams, useRouter } from "next/navigation";
@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 function Modal() {
   let [isOpen, setIsOpen] = useState(true);
-  const id = useParams().id;
+  const id = useParams().id; // item id
   const [product, setProduct] = useState<Product>();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -26,11 +26,12 @@ function Modal() {
   }, [id]);
 
   return (
+    // from headless.com
     <Dialog
       open={isOpen}
       onClose={() => {
         setIsOpen(false);
-        router.back();
+        router.back(); // back to main
       }}
       className="relative z-50">
       {/* The backdrop, rendered as a fixed sibling to the panel container */}

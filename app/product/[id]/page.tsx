@@ -9,6 +9,7 @@ type Props = {
 
 async function ProductPage({ params: { id } }: Props) {
   // console.log(props);
+  // try-catch для перехвата продукта, иначе page NotFound
   try {
     const res = await fetch(`https://fakestoreapi.com/products/${id}`);
     const product: Product = await res.json();
