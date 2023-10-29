@@ -46,16 +46,16 @@ function Modal() {
             {loading ? (
               <div className="h-8 w-8 rounded-full border-2 border-dotted border-blue-600 animate-spin" />
             ) : (
-              <div className="flex gap-x-8 h-96">
+              <div className="flex flex-col md:flex-row gap-x-8 h-96">
                 {product?.image && (
-                  <div className="relative w-72 h-full hidden md:inline">
+                  <div className="relative w-72 h-full">
                     <ProductImage product={product} fill />
                   </div>
                 )}
                 <div className="flex flex-1 flex-col">
                   <div className="flex-1">
                     <h4 className="font-semibold">{product?.title}</h4>
-                    <p className="font-medium text-sm">{product?.price}</p>
+                    <p className="font-medium text-sm mt-2">$ {product?.price}</p>
                     <div className="flex items-center text-sm my-4">
                       <p>{product?.rating.rate}</p>
                       {product?.rating.rate && (
@@ -70,11 +70,12 @@ function Modal() {
                       )}
                       <p className=" text-blue-600 hover:underline cursor-pointer text-xs">See all {product?.rating.count} reviews</p>
                     </div>
-                    <p className="line-clamp-5 text-sm">{product?.description}</p>
+                    <p className="line-clamp-5 text-sm mb-2">{product?.description}</p>
                   </div>
                   <div className="space-y-3 text-sm">
-                    <button className="button w-full bg-blue-600 text-white border-transparent hover:border-blue-600 hover:bg-transparent hover:text-black">Add to basket</button>
-                    <button onClick={() => window.location.reload()} className="button w-full bg-blue-600 text-white border-transparent hover:border-blue-600 hover:bg-transparent hover:text-black">
+                    <button className="w-full rounded-full bg-blue-100 border-cyan-400 text-black hover:border-blue-600 p-1 hover:bg-blue-600 hover:text-white">Add to basket</button>
+
+                    <button onClick={() => window.location.reload()} className="w-full rounded-full bg-blue-100 text-black hover:border-blue-600 p-1 hover:bg-blue-600 hover:text-white">
                       View full details
                     </button>
                   </div>

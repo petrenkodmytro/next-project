@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="">
         <Header/>
         {children}
-        <footer>footer</footer>
+        <footer className="text-center italic mb-2">Developed by <a href="https://github.com/petrenkodmytro" title="GitHub" className="underline underline-offset-4 hover:text-blue-600">Dmytro Petrnko</a> </footer>
       </body>
     </html>
   );
